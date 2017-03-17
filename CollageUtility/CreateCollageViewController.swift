@@ -42,7 +42,11 @@ class CreateCollageViewController: UIViewController {
     }
     
     
-    
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+        
+        
+        
+    }
     
     
     
