@@ -23,6 +23,12 @@ class CreateCollageViewController: UIViewController {
         
     }
 
+    @IBAction func createButton(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "twoImageSegue", sender: nil)
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +40,12 @@ class CreateCollageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    
+    
+    
     
     /*
     // MARK: - Navigation

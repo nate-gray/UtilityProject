@@ -32,6 +32,10 @@
                                 <rect key="frame" x="154" y="449" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create -&gt;"/>
+                                <connections>
+                                    <action selector="createButton:" destination="oIz-ky-ynd" eventType="touchUpInside" id="eOj-rS-rFN"/>
+                                    <segue destination="Etk-Xn-Jzv" kind="show" identifier="twoImageSegue" id="bte-q9-ZO0"/>
+                                </connections>
                             </button>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minimumValue="2" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="uHX-II-tNV">
                                 <rect key="frame" x="140" y="352" width="94" height="29"/>
@@ -58,6 +62,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Btu-wP-syn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="400.80000000000001" y="24.7376311844078"/>
+        </scene>
+        <!--Two Image View Controller-->
+        <scene sceneID="5KM-dE-MLf">
+            <objects>
+                <viewController id="Etk-Xn-Jzv" customClass="TwoImageViewController" customModule="CollageUtility" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RuX-My-jbC"/>
+                        <viewControllerLayoutGuide type="bottom" id="vQX-4b-QH4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SPc-z4-Hjp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="G79-VM-pry">
+                                <rect key="frame" x="16" y="248" width="343" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDb-l6-3WB">
+                                <rect key="frame" x="252" y="172" width="33" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addSecondImage:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="ET8-73-oug"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcg-w4-PsM">
+                                <rect key="frame" x="84" y="172" width="33" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addFirstImage:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="rLW-Xh-AcY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="twoImagePlaceholder" destination="G79-VM-pry" id="dAh-W9-JSw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDc-fC-KgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2044" y="24.7376311844078"/>
         </scene>
         <!--Saved Collages-->
         <scene sceneID="Fi0-p2-qxF">
@@ -97,4 +146,7 @@
             <point key="canvasLocation" x="-550" y="-302"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pizza" width="320" height="320"/>
+    </resources>
 </document>
