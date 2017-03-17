@@ -40,8 +40,7 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
         present(imagePicker, animated: true, completion:nil)
         
     }
-    
-    
+
     @IBAction func addSecondImage(_ sender: UIButton) {
         
         imagePicker.allowsEditing = false
@@ -50,6 +49,7 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
         present(imagePicker, animated: true, completion:nil)
         
     }
+    
     
     //MARK: Delegates
     

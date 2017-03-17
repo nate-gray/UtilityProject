@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -75,30 +76,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="G79-VM-pry">
-                                <rect key="frame" x="16" y="248" width="343" height="170"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="G79-VM-pry">
+                                <rect key="frame" x="0.0" y="20" width="375" height="590"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDb-l6-3WB">
-                                <rect key="frame" x="252" y="172" width="33" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WE9-al-gEj">
+                                <rect key="frame" x="260" y="318" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="addSecondImage:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="ET8-73-oug"/>
+                                    <action selector="addSecondImage:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="Uts-FU-LKs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcg-w4-PsM">
-                                <rect key="frame" x="84" y="172" width="33" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4k-ZH-jWd">
+                                <rect key="frame" x="66" y="318" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="addFirstImage:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="rLW-Xh-AcY"/>
+                                    <action selector="addFirstImage:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="Mr1-sR-tOH"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G79-VM-pry" firstAttribute="trailing" secondItem="SPc-z4-Hjp" secondAttribute="trailingMargin" id="110-92-o1J"/>
+                            <constraint firstItem="G79-VM-pry" firstAttribute="leading" secondItem="SPc-z4-Hjp" secondAttribute="leadingMargin" id="3BQ-vu-aP5"/>
+                            <constraint firstItem="G79-VM-pry" firstAttribute="top" secondItem="RuX-My-jbC" secondAttribute="bottom" id="8RM-bG-BnV"/>
+                            <constraint firstItem="G79-VM-pry" firstAttribute="leading" secondItem="SPc-z4-Hjp" secondAttribute="leadingMargin" id="ApR-Kb-O3p"/>
+                            <constraint firstItem="G79-VM-pry" firstAttribute="trailing" secondItem="SPc-z4-Hjp" secondAttribute="trailingMargin" id="HiD-CK-aXO"/>
+                            <constraint firstItem="vQX-4b-QH4" firstAttribute="top" secondItem="G79-VM-pry" secondAttribute="bottom" id="L87-RK-HBs"/>
+                            <constraint firstItem="G79-VM-pry" firstAttribute="leading" secondItem="SPc-z4-Hjp" secondAttribute="leading" id="LN0-gC-myH"/>
+                            <constraint firstItem="G79-VM-pry" firstAttribute="leading" secondItem="SPc-z4-Hjp" secondAttribute="leadingMargin" id="QqC-VF-zct"/>
+                            <constraint firstItem="vQX-4b-QH4" firstAttribute="top" secondItem="G79-VM-pry" secondAttribute="bottom" constant="8" id="R5P-LW-oDf"/>
+                            <constraint firstItem="vQX-4b-QH4" firstAttribute="top" secondItem="G79-VM-pry" secondAttribute="bottom" constant="8" id="SWf-Qr-JVM"/>
+                            <constraint firstItem="vQX-4b-QH4" firstAttribute="top" secondItem="G79-VM-pry" secondAttribute="bottom" constant="8" id="WRY-Zp-vI4"/>
+                            <constraint firstAttribute="trailing" secondItem="G79-VM-pry" secondAttribute="trailing" id="dIq-J1-LP7"/>
+                            <constraint firstItem="G79-VM-pry" firstAttribute="trailing" secondItem="SPc-z4-Hjp" secondAttribute="trailingMargin" id="hLp-jk-O2G"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="twoImagePlaceholder" destination="G79-VM-pry" id="dAh-W9-JSw"/>
