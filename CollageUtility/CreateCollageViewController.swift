@@ -17,6 +17,12 @@ class CreateCollageViewController: UIViewController {
     
     //MARK: Actions
     
+    @IBAction func stepper(_ sender: UIStepper) {
+        
+        numberCount.text = String(sender.value)
+        
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
