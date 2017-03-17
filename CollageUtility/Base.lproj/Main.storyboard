@@ -119,8 +119,11 @@
                     </view>
                     <connections>
                         <outlet property="imageOne" destination="po9-Pt-lVU" id="P2h-7o-aa8"/>
+                        <outlet property="imageOneButtonOutlet" destination="BbD-GU-n65" id="z6d-0C-FG5"/>
                         <outlet property="imageTwo" destination="9oH-5T-L5n" id="wHL-vG-jeJ"/>
+                        <outlet property="imageTwoButtonOutlet" destination="Z0T-Ja-pAQ" id="deU-Eq-DmR"/>
                         <outlet property="mainView" destination="ei8-6X-v5O" id="8r3-ng-gcA"/>
+                        <outlet property="saveButtonOutlet" destination="bCt-LH-XH8" id="9KD-Ow-Oh8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lDc-fC-KgV" userLabel="First Responder" sceneMemberID="firstResponder"/>

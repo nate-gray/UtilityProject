@@ -29,6 +29,9 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var imageOne: UIImageView!
     @IBOutlet weak var imageTwo: UIImageView!
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var imageOneButtonOutlet: UIButton!
+    @IBOutlet weak var imageTwoButtonOutlet: UIButton!
+    @IBOutlet weak var saveButtonOutlet: UIButton!
 
     
     let imagePicker = UIImagePickerController()
@@ -59,6 +62,10 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func saveCollage(_ sender: UIButton) {
+        
+        imageOneButtonOutlet.isHidden = true
+        imageTwoButtonOutlet.isHidden = true
+        saveButtonOutlet.isHidden = true
         
         UIGraphicsBeginImageContextWithOptions(mainView.layer.frame.size, false, 0.0)
         mainView.layer.render(in: UIGraphicsGetCurrentContext()!)
