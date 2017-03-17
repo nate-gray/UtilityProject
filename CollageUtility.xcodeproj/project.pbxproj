@@ -10,7 +10,6 @@
 		4E388E971E7A2326002048B5 /* CreateCollageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E388E961E7A2326002048B5 /* CreateCollageViewController.swift */; };
 		4E4B5B101E7B6D60009F0FFC /* TwoImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B5B0F1E7B6D60009F0FFC /* TwoImageViewController.swift */; };
 		4ED5DFC81E78CBEA00F5D638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED5DFC71E78CBEA00F5D638 /* AppDelegate.swift */; };
-		4ED5DFCA1E78CBEA00F5D638 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED5DFC91E78CBEA00F5D638 /* ViewController.swift */; };
 		4ED5DFCD1E78CBEA00F5D638 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED5DFCB1E78CBEA00F5D638 /* Main.storyboard */; };
 		4ED5DFCF1E78CBEA00F5D638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED5DFCE1E78CBEA00F5D638 /* Assets.xcassets */; };
 		4ED5DFD21E78CBEA00F5D638 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED5DFD01E78CBEA00F5D638 /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 		4E4B5B0F1E7B6D60009F0FFC /* TwoImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoImageViewController.swift; sourceTree = "<group>"; };
 		4ED5DFC41E78CBEA00F5D638 /* CollageUtility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollageUtility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED5DFC71E78CBEA00F5D638 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4ED5DFC91E78CBEA00F5D638 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4ED5DFCC1E78CBEA00F5D638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4ED5DFCE1E78CBEA00F5D638 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ED5DFD11E78CBEA00F5D638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				4ED5DFC71E78CBEA00F5D638 /* AppDelegate.swift */,
-				4ED5DFC91E78CBEA00F5D638 /* ViewController.swift */,
 				4E388E961E7A2326002048B5 /* CreateCollageViewController.swift */,
 				4E4B5B0F1E7B6D60009F0FFC /* TwoImageViewController.swift */,
 				4ED5DFCB1E78CBEA00F5D638 /* Main.storyboard */,
@@ -143,7 +140,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E388E971E7A2326002048B5 /* CreateCollageViewController.swift in Sources */,
-				4ED5DFCA1E78CBEA00F5D638 /* ViewController.swift in Sources */,
 				4ED5DFC81E78CBEA00F5D638 /* AppDelegate.swift in Sources */,
 				4E4B5B101E7B6D60009F0FFC /* TwoImageViewController.swift in Sources */,
 			);

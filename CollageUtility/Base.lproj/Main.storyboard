@@ -120,6 +120,14 @@
                                             <action selector="goHome:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="5Gn-Op-B5U"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e14-uh-tH1">
+                                        <rect key="frame" x="118" y="306" width="138" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Create Another!"/>
+                                        <connections>
+                                            <action selector="createAnother:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="WAL-RS-iKH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -133,6 +141,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="createAnotherOutlet" destination="e14-uh-tH1" id="Mfd-Xa-btg"/>
                         <outlet property="goHomeOutlet" destination="Jt2-3k-Gbr" id="Pfd-ZQ-7oy"/>
                         <outlet property="imageOne" destination="po9-Pt-lVU" id="P2h-7o-aa8"/>
                         <outlet property="imageOneButtonOutlet" destination="BbD-GU-n65" id="z6d-0C-FG5"/>

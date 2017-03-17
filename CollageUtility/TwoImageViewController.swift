@@ -33,6 +33,7 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var imageTwoButtonOutlet: UIButton!
     @IBOutlet weak var saveButtonOutlet: UIButton!
     @IBOutlet weak var goHomeOutlet: UIButton!
+    @IBOutlet weak var createAnotherOutlet: UIButton!
 
     
     let imagePicker = UIImagePickerController()
@@ -75,15 +76,28 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
         UIGraphicsEndImageContext()
         
         let appleShare = UIActivityViewController(activityItems: [viewImage], applicationActivities: [])
-        present(appleShare, animated: true)
+        present(appleShare, animated: true, completion: nil)
+        
+        createAnotherOutlet.isHidden = false
         
     }
 
+    
+    
     @IBAction func goHome(_ sender: UIButton) {
         
         self.performSegue(withIdentifier: "unwindToMainView", sender: self)
         
     }
+    
+    @IBAction func createAnother(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "unwindToMainView", sender: self)
+        
+    }
+
+    
+    
     
     //MARK: Delegates
     
