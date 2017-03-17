@@ -26,9 +26,12 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
     
     //MARK: Outlets
     
-    @IBOutlet weak var twoImagePlaceholder: UIImageView!
+    @IBOutlet weak var imageOne: UIImageView!
+    @IBOutlet weak var imageTwo: UIImageView!
+
     
     let imagePicker = UIImagePickerController()
+    var imagePicked = 0
     
     //MARK: Actions
     
@@ -39,6 +42,8 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
         imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(imagePicker, animated: true, completion:nil)
         
+        imagePicked = 1
+        
     }
 
     @IBAction func addSecondImage(_ sender: UIButton) {
@@ -48,21 +53,35 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
         imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(imagePicker, animated: true, completion:nil)
         
+        imagePicked = 2
+        
     }
     
     
     //MARK: Delegates
     
+    
     func imagePickerController(_ imagePicker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
-        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        twoImagePlaceholder.contentMode = .scaleAspectFit
-        twoImagePlaceholder.image = chosenImage
-        dismiss(animated: true, completion: nil)
+        let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+        if imagePicked == 1 {
+            imageOne.image = pickedImage
+            imageOne.contentMode = .scaleAspectFit
+            dismiss(animated: true, completion: nil)
+            
+        }
+        
+        else {
+            
+            imageTwo.image = pickedImage
+            imageTwo.contentMode = .scaleAspectFit
+            dismiss(animated: true, completion: nil)
     
     }
+    }
     
-    func imagePickerControllerDidCancel(_ imagePicker: UIImagePickerController) {
+    func imagePickerControllerDidCancel(_ imagePicker1: UIImagePickerController, _ imagePicker2: UIImagePickerController) {
         
         dismiss(animated: true, completion: nil)
         
