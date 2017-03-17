@@ -28,6 +28,7 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBOutlet weak var imageOne: UIImageView!
     @IBOutlet weak var imageTwo: UIImageView!
+    @IBOutlet weak var mainView: UIView!
 
     
     let imagePicker = UIImagePickerController()
@@ -42,7 +43,7 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
         imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(imagePicker, animated: true, completion:nil)
         
-        imagePicked = 1
+        imagePicked = sender.tag
         
     }
 
@@ -53,10 +54,39 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
         imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(imagePicker, animated: true, completion:nil)
         
-        imagePicked = 2
+        imagePicked = sender.tag
         
     }
     
+    @IBAction func saveCollage(_ sender: UIButton) {
+        
+        UIGraphicsBeginImageContextWithOptions(mainView.layer.frame.size, false, 0.0)
+        mainView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let viewImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        let data = UIImagePNGRepresentation(viewImage)
+        let documentsDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let writePath = documentsDir.appending("myimage.png")
+        
+        do {
+            
+            try data?.write(to: URL(fileURLWithPath: writePath))
+            
+            let alert = UIAlertController(title: "Save Collage", message: "Image Saved!", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        
+        catch {
+        
+            print(error)
+        }
+        
+    }
+
     
     //MARK: Delegates
     
