@@ -31,9 +31,11 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
     @IBOutlet weak var saveButtonOutlet: UIButton!
     @IBOutlet weak var createAnotherOutlet: UIButton!
     
+    //MARK: Create Image Picker Controller
+    
     let imagePicker = UIImagePickerController()
     
-    //MARK: Handlers
+    //MARK: Gesture Handlers
     
     func handlePan(_ recognizer:UIPanGestureRecognizer) {
         
@@ -98,7 +100,7 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
 //        self.performSegue(withIdentifier: "unwindToMainView", sender: self)
 //        
 //    }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "Save Image" {
@@ -112,17 +114,20 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
     }
     
 
+    //MARK: Launch image picker, add image to the canvas, and implement gestures to the image
+    
     func imagePickerController(_ imagePicker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
     
         
-        let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
-        let imageview = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        imageview.image = pickedImage
-        imageview.contentMode = .scaleAspectFit
-        self.mainView.addSubview(imageview)
-        dismiss(animated: true, completion: nil)
+        let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage //selected image from picker
         
-        //Add Gestures
+        let imageview = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))  //create a new UIImageView frame for selected picker
+        imageview.image = pickedImage  //place the selected image in the new view
+        imageview.contentMode = .scaleAspectFit //scale the image
+        self.mainView.addSubview(imageview) //add the new view to the main view
+        dismiss(animated: true, completion: nil) // close the image picker
+        
+        //Add Gestures to the UIImageVIew
         imageview.isUserInteractionEnabled = true
         
         let pinch = UIPinchGestureRecognizer(target: self, action: #selector(CreateCollage.handlePinch(_:)))
@@ -136,6 +141,8 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
         
         
     }
+    
+    // If the image picker is canceled, close the picker
     
     func imagePickerControllerDidCancel(_ imagePicker1: UIImagePickerController, _ imagePicker2: UIImagePickerController) {
         
