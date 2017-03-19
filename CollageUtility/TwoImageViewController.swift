@@ -35,7 +35,6 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var saveButtonOutlet: UIButton!
     @IBOutlet weak var goHomeOutlet: UIButton!
     @IBOutlet weak var createAnotherOutlet: UIButton!
-//    @IBOutlet var imagePlaceholder: UIImageView!
 
 
     
@@ -185,22 +184,4 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
         dismiss(animated: true, completion: nil)
         
     }
-    
-    func createPanGesture(targetView: UIImageView) {
-        
-        
-        
-    }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
