@@ -39,6 +39,9 @@
                                 <rect key="frame" x="16" y="621" width="40" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="T"/>
+                                <connections>
+                                    <action selector="addText:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="ywH-T1-eQY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPf-Rn-p1w">
                                 <rect key="frame" x="313" y="625" width="46" height="30"/>
@@ -69,24 +72,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lDc-fC-KgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1714.4000000000001" y="24.7376311844078"/>
-        </scene>
-        <!--Save Collage-->
-        <scene sceneID="b45-3c-Vq9">
-            <objects>
-                <viewController id="Kii-eM-VdZ" customClass="SaveCollage" customModule="CollageUtility" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iti-cf-hEv"/>
-                        <viewControllerLayoutGuide type="bottom" id="P6A-cK-Dr2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DCN-6p-7ul">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RdI-xw-VbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2485.5999999999999" y="24.7376311844078"/>
         </scene>
     </scenes>
 </document>

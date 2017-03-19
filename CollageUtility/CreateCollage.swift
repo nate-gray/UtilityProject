@@ -63,6 +63,56 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
     
     //MARK: Actions
     
+    
+    @IBAction func addText(_ sender: UIButton) {
+        
+        // Create an alert to prompt for message
+        
+        let alertController = UIAlertController(title: "Message", message: "Enter your message", preferredStyle: .alert)
+        
+        // Create the text field in the alert
+        
+        alertController.addTextField { (textField) in textField.text = ""
+        }
+        
+        // If text is entered, when selecting dont create a label
+        let confirmText = UIAlertAction(title: "Done", style: .default) { (_) in
+            if let field = alertController.textFields![0] as? UITextField {
+                
+                var label = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50)) // Create a label
+                label.text = field.text //Set the text of the label to text entered in alert
+                label.font = UIFont(name: "MarkerFelt-Thin", size: 40) // Custom font style
+                label.sizeToFit() // Resize the label to fit the string
+                label.isUserInteractionEnabled = true //Allow for gestures on the label
+                
+                self.mainView.addSubview(label) //Add to the main view
+                
+                // Add gestures to the label
+                
+                let pinch = UIPinchGestureRecognizer(target: self, action: #selector(CreateCollage.handlePinch(_:)))
+                label.addGestureRecognizer(pinch)
+                
+                let pan = UIPanGestureRecognizer(target: self, action: #selector(CreateCollage.handlePan(_:)))
+                label.addGestureRecognizer(pan)
+                
+                let rotate = UIRotationGestureRecognizer(target: self, action: #selector(CreateCollage.handleRotate(_:)))
+                label.addGestureRecognizer(rotate)
+                
+            } else {
+                
+            }
+        }
+        
+        let cancelText = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        
+        alertController.addAction(cancelText)
+        alertController.addAction(confirmText)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        
+    }
+    
     @IBAction func addImage(_ sender: UIButton) {
         
         imagePicker.allowsEditing = false
@@ -71,8 +121,6 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
         present(imagePicker, animated: true, completion:nil)
         
     }
-    
-    
     
     @IBAction func doneButton(_ sender: UIButton) {
         
