@@ -8,8 +8,9 @@
 
 import UIKit
 
-class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,10 +35,38 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var saveButtonOutlet: UIButton!
     @IBOutlet weak var goHomeOutlet: UIButton!
     @IBOutlet weak var createAnotherOutlet: UIButton!
+//    @IBOutlet var imagePlaceholder: UIImageView!
+
 
     
     let imagePicker = UIImagePickerController()
     var imagePicked = 0
+    
+    //MARK: Handlers
+    
+    func handlePan(_ recognizer:UIPanGestureRecognizer) {
+        
+        let translation = recognizer.translation(in: self.view)
+        if let view = recognizer.view {
+            view.center = CGPoint(x:view.center.x + translation.x,
+                                  y:view.center.y + translation.y)
+        }
+        recognizer.setTranslation(CGPoint.zero, in: self.view)
+    }
+    
+    func handlePinch(_ recognizer : UIPinchGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = view.transform.scaledBy(x: recognizer.scale, y: recognizer.scale)
+            recognizer.scale = 1
+        }
+    }
+    
+    func handleRotate(_ recognizer : UIRotationGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = view.transform.rotated(by: recognizer.rotation)
+            recognizer.rotation = 0
+        }
+    }
     
     //MARK: Actions
     
@@ -54,6 +83,8 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
 
     @IBAction func addSecondImage(_ sender: UIButton) {
         
+        
+        
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
         imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
@@ -63,24 +94,36 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
         
     }
     
-    @IBAction func saveCollage(_ sender: UIButton) {
+    @IBAction func addImage(_ sender: UIButton) {
         
-        imageOneButtonOutlet.isHidden = true
-        imageTwoButtonOutlet.isHidden = true
-        saveButtonOutlet.isHidden = true
-        goHomeOutlet.isHidden = true
-        
-        UIGraphicsBeginImageContextWithOptions(mainView.layer.frame.size, false, 0.0)
-        mainView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let viewImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        let appleShare = UIActivityViewController(activityItems: [viewImage], applicationActivities: [])
-        present(appleShare, animated: true, completion: nil)
-        
-        createAnotherOutlet.isHidden = false
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        present(imagePicker, animated: true, completion:nil)
         
     }
+    
+    
+    
+    
+//    @IBAction func saveCollage(_ sender: UIButton) {
+//        
+//        UIGraphicsBeginImageContextWithOptions(mainView.layer.frame.size, false, 0.0)
+//        mainView.layer.render(in: UIGraphicsGetCurrentContext()!)
+//        let viewImage = UIGraphicsGetImageFromCurrentImageContext()!
+//        UIGraphicsEndImageContext()
+//        
+//        // Show the apple share UI
+//        
+//        let appleShare = UIActivityViewController(activityItems: [viewImage], applicationActivities: [])
+//        present(appleShare, animated: true, completion: nil)
+//        
+//        
+//        // Show the create another button to go back to the home screen
+//        
+//        createAnotherOutlet.isHidden = false
+//        
+//    }
 
     
     
@@ -90,36 +133,51 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
         
     }
     
-    @IBAction func createAnother(_ sender: UIButton) {
+//    @IBAction func createAnother(_ sender: UIButton) {
+//        
+//        self.performSegue(withIdentifier: "unwindToMainView", sender: self)
+//        
+//    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        self.performSegue(withIdentifier: "unwindToMainView", sender: self)
+
+        
+        if segue.identifier == "Save Image" {
+            
+            let dvc = segue.destination as! TwoCreateViewController
+            dvc.image1 = imageOne.image
+            dvc.image2 = imageTwo.image
+
+        }
+
         
     }
+    
 
-    
-    
-    
-    //MARK: Delegates
-    
-    
     func imagePickerController(_ imagePicker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    
         
         let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        let imageview = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        imageview.image = pickedImage
+        imageview.contentMode = .scaleAspectFit
+        self.mainView.addSubview(imageview)
+        dismiss(animated: true, completion: nil)
         
-        if imagePicked == 1 {
-            imageOne.image = pickedImage
-            imageOne.contentMode = .scaleAspectFit
-            dismiss(animated: true, completion: nil)
-            
-        }
+        //Add Gestures
+        imageview.isUserInteractionEnabled = true
         
-        else {
-            
-            imageTwo.image = pickedImage
-            imageTwo.contentMode = .scaleAspectFit
-            dismiss(animated: true, completion: nil)
-    
-    }
+        let pinch = UIPinchGestureRecognizer(target: self, action: #selector(TwoImageViewController.handlePinch(_:)))
+        imageview.addGestureRecognizer(pinch)
+        
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(TwoImageViewController.handlePan(_:)))
+        imageview.addGestureRecognizer(pan)
+        
+        let rotate = UIRotationGestureRecognizer(target: self, action: #selector(TwoImageViewController.handleRotate(_:)))
+        imageview.addGestureRecognizer(rotate)
+        
+        
     }
     
     func imagePickerControllerDidCancel(_ imagePicker1: UIImagePickerController, _ imagePicker2: UIImagePickerController) {
@@ -128,7 +186,11 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
         
     }
     
-    
+    func createPanGesture(targetView: UIImageView) {
+        
+        
+        
+    }
     
     
     /*
