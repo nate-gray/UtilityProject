@@ -10,24 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="Y6w-rj-ayL">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0MQ-ws-ayz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="JsB-iT-1vt" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yzi-bC-PmL"/>
-                        <viewControllerLayoutGuide type="bottom" id="L9q-VZ-kmx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5gI-pX-ZAQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="2681" y="-699"/>
-        </scene>
         <!--Create Collage-->
         <scene sceneID="5KM-dE-MLf">
             <objects>
@@ -62,7 +44,7 @@
                                 <rect key="frame" x="313" y="625" width="46" height="30"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <segue destination="Kii-eM-VdZ" kind="presentation" identifier="Save Image" id="9KF-Pu-fNP"/>
+                                    <action selector="doneButton:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="9az-ma-iEI"/>
                                 </connections>
                             </button>
                         </subviews>

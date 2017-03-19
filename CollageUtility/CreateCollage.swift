@@ -74,25 +74,19 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
     
     
     
-    
-//    @IBAction func saveCollage(_ sender: UIButton) {
-//        
-//        UIGraphicsBeginImageContextWithOptions(mainView.layer.frame.size, false, 0.0)
-//        mainView.layer.render(in: UIGraphicsGetCurrentContext()!)
-//        let viewImage = UIGraphicsGetImageFromCurrentImageContext()!
-//        UIGraphicsEndImageContext()
-//        
-//        // Show the apple share UI
-//        
-//        let appleShare = UIActivityViewController(activityItems: [viewImage], applicationActivities: [])
-//        present(appleShare, animated: true, completion: nil)
-//        
-//        
-//        // Show the create another button to go back to the home screen
-//        
-//        createAnotherOutlet.isHidden = false
-//        
-//    }
+    @IBAction func doneButton(_ sender: UIButton) {
+        
+        UIGraphicsBeginImageContextWithOptions(mainView.layer.frame.size, false, 0.0)
+        mainView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let imageCanvas = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        // Show the apple share UI
+        
+        let appleShare = UIActivityViewController(activityItems: [imageCanvas], applicationActivities: [])
+        present(appleShare, animated: true, completion: nil)
+        
+    }
 
     
 //    @IBAction func createAnother(_ sender: UIButton) {
@@ -101,17 +95,18 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
 //        
 //    }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "Save Image" {
-            
-            let dvc = segue.destination as! SaveCollage
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//        if segue.identifier == "Save Image" {
+//            
+//            let segueToPreview = segue.destination as! SaveCollage
+    
 //            dvc.image1 = imageOne.image
 //            dvc.image2 = imageTwo.image
 
-        }
-        
-    }
+//        }
+//        
+//    }
     
 
     //MARK: Launch image picker, add image to the canvas, and implement gestures to the image
