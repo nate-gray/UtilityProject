@@ -37,6 +37,13 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
     
     //MARK: Gesture Handlers
     
+    func handleTap(_ recognizer:UITapGestureRecognizer) {
+        
+        let object = recognizer.view as? AnyObject
+        tapAction(sender: object!)
+        
+    }
+    
     func handlePan(_ recognizer:UIPanGestureRecognizer) {
         
         let translation = recognizer.translation(in: self.view)
@@ -63,6 +70,21 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
     
     //MARK: Actions
     
+    
+    @IBAction func tapAction(sender: AnyObject) {
+        
+        let deleteAlert = UIAlertController(title: "Delete", message: "Remove from canvas", preferredStyle: .alert)
+        let confirmDelete = UIAlertAction(title: "Delete", style: .default) { (_) in
+            sender.removeFromSuperview() }
+        
+        let cancelDelete = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        
+        deleteAlert.addAction(confirmDelete)
+        deleteAlert.addAction(cancelDelete)
+        
+        self.present(deleteAlert, animated: true, completion: nil)
+        
+    }
     
     @IBAction func addText(_ sender: UIButton) {
         
@@ -98,6 +120,9 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
                 let rotate = UIRotationGestureRecognizer(target: self, action: #selector(CreateCollage.handleRotate(_:)))
                 label.addGestureRecognizer(rotate)
                 
+                let tap = UITapGestureRecognizer(target: self, action: #selector(CreateCollage.handleTap(_:)))
+                label.addGestureRecognizer(tap)
+                
             } else {
                 
             }
@@ -115,7 +140,7 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
     
     @IBAction func addImage(_ sender: UIButton) {
         
-        imagePicker.allowsEditing = false
+        imagePicker.allowsEditing = true
         imagePicker.sourceType = .photoLibrary
         imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(imagePicker, animated: true, completion:nil)
@@ -162,7 +187,7 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
     func imagePickerController(_ imagePicker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
     
         
-        let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage //selected image from picker
+        let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage //selected image from picker
         
         let imageview = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))  //create a new UIImageView frame for selected picker
         imageview.image = pickedImage  //place the selected image in the new view
@@ -182,6 +207,8 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
         let rotate = UIRotationGestureRecognizer(target: self, action: #selector(CreateCollage.handleRotate(_:)))
         imageview.addGestureRecognizer(rotate)
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CreateCollage.handleTap(_:)))
+        imageview.addGestureRecognizer(tap)
         
     }
     
