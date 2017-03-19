@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
+class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
     
     override func viewDidLoad() {
@@ -144,7 +144,7 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
         
         if segue.identifier == "Save Image" {
             
-            let dvc = segue.destination as! TwoCreateViewController
+            let dvc = segue.destination as! SaveCollage
             dvc.image1 = imageOne.image
             dvc.image2 = imageTwo.image
 
@@ -167,13 +167,13 @@ class TwoImageViewController: UIViewController, UIImagePickerControllerDelegate,
         //Add Gestures
         imageview.isUserInteractionEnabled = true
         
-        let pinch = UIPinchGestureRecognizer(target: self, action: #selector(TwoImageViewController.handlePinch(_:)))
+        let pinch = UIPinchGestureRecognizer(target: self, action: #selector(CreateCollage.handlePinch(_:)))
         imageview.addGestureRecognizer(pinch)
         
-        let pan = UIPanGestureRecognizer(target: self, action: #selector(TwoImageViewController.handlePan(_:)))
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(CreateCollage.handlePan(_:)))
         imageview.addGestureRecognizer(pan)
         
-        let rotate = UIRotationGestureRecognizer(target: self, action: #selector(TwoImageViewController.handleRotate(_:)))
+        let rotate = UIRotationGestureRecognizer(target: self, action: #selector(CreateCollage.handleRotate(_:)))
         imageview.addGestureRecognizer(rotate)
         
         

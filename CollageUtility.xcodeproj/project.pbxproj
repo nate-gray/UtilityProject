@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E388E971E7A2326002048B5 /* CreateCollageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E388E961E7A2326002048B5 /* CreateCollageViewController.swift */; };
-		4E4B5B101E7B6D60009F0FFC /* TwoImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B5B0F1E7B6D60009F0FFC /* TwoImageViewController.swift */; };
-		4EC701BE1E7DBDDE00C3D0D4 /* TwoCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC701BD1E7DBDDE00C3D0D4 /* TwoCreateViewController.swift */; };
+		4E4B5B101E7B6D60009F0FFC /* CreateCollage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B5B0F1E7B6D60009F0FFC /* CreateCollage.swift */; };
+		4EC701BE1E7DBDDE00C3D0D4 /* SaveCollage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC701BD1E7DBDDE00C3D0D4 /* SaveCollage.swift */; };
 		4ED5DFC81E78CBEA00F5D638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED5DFC71E78CBEA00F5D638 /* AppDelegate.swift */; };
 		4ED5DFCD1E78CBEA00F5D638 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED5DFCB1E78CBEA00F5D638 /* Main.storyboard */; };
 		4ED5DFCF1E78CBEA00F5D638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED5DFCE1E78CBEA00F5D638 /* Assets.xcassets */; };
@@ -17,9 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E388E961E7A2326002048B5 /* CreateCollageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCollageViewController.swift; sourceTree = "<group>"; };
-		4E4B5B0F1E7B6D60009F0FFC /* TwoImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoImageViewController.swift; sourceTree = "<group>"; };
-		4EC701BD1E7DBDDE00C3D0D4 /* TwoCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoCreateViewController.swift; sourceTree = "<group>"; };
+		4E4B5B0F1E7B6D60009F0FFC /* CreateCollage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCollage.swift; sourceTree = "<group>"; };
+		4EC701BD1E7DBDDE00C3D0D4 /* SaveCollage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveCollage.swift; sourceTree = "<group>"; };
 		4ED5DFC41E78CBEA00F5D638 /* CollageUtility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollageUtility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED5DFC71E78CBEA00F5D638 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ED5DFCC1E78CBEA00F5D638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,9 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				4ED5DFC71E78CBEA00F5D638 /* AppDelegate.swift */,
-				4E388E961E7A2326002048B5 /* CreateCollageViewController.swift */,
-				4E4B5B0F1E7B6D60009F0FFC /* TwoImageViewController.swift */,
-				4EC701BD1E7DBDDE00C3D0D4 /* TwoCreateViewController.swift */,
+				4E4B5B0F1E7B6D60009F0FFC /* CreateCollage.swift */,
+				4EC701BD1E7DBDDE00C3D0D4 /* SaveCollage.swift */,
 				4ED5DFCB1E78CBEA00F5D638 /* Main.storyboard */,
 				4ED5DFCE1E78CBEA00F5D638 /* Assets.xcassets */,
 				4ED5DFD01E78CBEA00F5D638 /* LaunchScreen.storyboard */,
@@ -143,10 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E388E971E7A2326002048B5 /* CreateCollageViewController.swift in Sources */,
-				4EC701BE1E7DBDDE00C3D0D4 /* TwoCreateViewController.swift in Sources */,
+				4EC701BE1E7DBDDE00C3D0D4 /* SaveCollage.swift in Sources */,
 				4ED5DFC81E78CBEA00F5D638 /* AppDelegate.swift in Sources */,
-				4E4B5B101E7B6D60009F0FFC /* TwoImageViewController.swift in Sources */,
+				4E4B5B101E7B6D60009F0FFC /* CreateCollage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TwoCreateViewController: UIViewController {
+class SaveCollage: UIViewController {
 
     @IBOutlet weak var imageOneSave: UIImageView!
     @IBOutlet weak var imageTwoSave: UIImageView!
