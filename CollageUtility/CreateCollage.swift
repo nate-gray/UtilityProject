@@ -27,19 +27,11 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
     
     //MARK: Outlets
     
-    @IBOutlet weak var imageOne: UIImageView!
-    @IBOutlet weak var imageTwo: UIImageView!
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var imageOneButtonOutlet: UIButton!
-    @IBOutlet weak var imageTwoButtonOutlet: UIButton!
     @IBOutlet weak var saveButtonOutlet: UIButton!
-    @IBOutlet weak var goHomeOutlet: UIButton!
     @IBOutlet weak var createAnotherOutlet: UIButton!
-
-
     
     let imagePicker = UIImagePickerController()
-    var imagePicked = 0
     
     //MARK: Handlers
     
@@ -68,30 +60,6 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
     }
     
     //MARK: Actions
-    
-    @IBAction func addFirstImage(_ sender: UIButton) {
-        
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-        present(imagePicker, animated: true, completion:nil)
-        
-        imagePicked = sender.tag
-        
-    }
-
-    @IBAction func addSecondImage(_ sender: UIButton) {
-        
-        
-        
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-        present(imagePicker, animated: true, completion:nil)
-        
-        imagePicked = sender.tag
-        
-    }
     
     @IBAction func addImage(_ sender: UIButton) {
         
@@ -125,13 +93,6 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
 //    }
 
     
-    
-    @IBAction func goHome(_ sender: UIButton) {
-        
-        self.performSegue(withIdentifier: "unwindToMainView", sender: self)
-        
-    }
-    
 //    @IBAction func createAnother(_ sender: UIButton) {
 //        
 //        self.performSegue(withIdentifier: "unwindToMainView", sender: self)
@@ -140,16 +101,13 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-
-        
         if segue.identifier == "Save Image" {
             
             let dvc = segue.destination as! SaveCollage
-            dvc.image1 = imageOne.image
-            dvc.image2 = imageTwo.image
+//            dvc.image1 = imageOne.image
+//            dvc.image2 = imageTwo.image
 
         }
-
         
     }
     

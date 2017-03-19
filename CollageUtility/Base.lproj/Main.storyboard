@@ -6,13 +6,32 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Two Image View Controller-->
+        <!--View Controller-->
+        <scene sceneID="Y6w-rj-ayL">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0MQ-ws-ayz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="JsB-iT-1vt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yzi-bC-PmL"/>
+                        <viewControllerLayoutGuide type="bottom" id="L9q-VZ-kmx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5gI-pX-ZAQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2681" y="-699"/>
+        </scene>
+        <!--Create Collage-->
         <scene sceneID="5KM-dE-MLf">
             <objects>
-                <viewController id="Etk-Xn-Jzv" customClass="TwoImageViewController" customModule="CollageUtility" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Etk-Xn-Jzv" customClass="CreateCollage" customModule="CollageUtility" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RuX-My-jbC"/>
                         <viewControllerLayoutGuide type="bottom" id="vQX-4b-QH4"/>
@@ -21,58 +40,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-6X-v5O">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-6X-v5O">
                                 <rect key="frame" x="0.0" y="28" width="375" height="592"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.48026401410000003" green="0.65686514929999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jt2-3k-Gbr">
-                                <rect key="frame" x="0.0" y="637" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&lt;"/>
-                                <connections>
-                                    <action selector="goHome:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="5Gn-Op-B5U"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPf-Rn-p1w">
-                                <rect key="frame" x="313" y="637" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="Kii-eM-VdZ" kind="presentation" identifier="Save Image" id="9KF-Pu-fNP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zj8-aZ-Uqr">
-                                <rect key="frame" x="164" y="637" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="164" y="625" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
+                                <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="addImage:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="ZOn-MM-OhY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edS-Uk-oW6">
+                                <rect key="frame" x="16" y="621" width="40" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="T"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPf-Rn-p1w">
+                                <rect key="frame" x="313" y="625" width="46" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <segue destination="Kii-eM-VdZ" kind="presentation" identifier="Save Image" id="9KF-Pu-fNP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iPf-Rn-p1w" firstAttribute="trailing" secondItem="SPc-z4-Hjp" secondAttribute="trailingMargin" id="7Nt-yf-g0y"/>
+                            <constraint firstItem="vQX-4b-QH4" firstAttribute="top" secondItem="iPf-Rn-p1w" secondAttribute="bottom" constant="12" id="KcC-rU-j2C"/>
+                            <constraint firstItem="edS-Uk-oW6" firstAttribute="top" secondItem="ei8-6X-v5O" secondAttribute="bottom" constant="1" id="M05-cc-ebw"/>
+                            <constraint firstAttribute="trailing" secondItem="ei8-6X-v5O" secondAttribute="trailing" id="P5m-ue-JdP"/>
+                            <constraint firstItem="ei8-6X-v5O" firstAttribute="leading" secondItem="SPc-z4-Hjp" secondAttribute="leading" id="Qar-E9-KXZ"/>
+                            <constraint firstItem="ei8-6X-v5O" firstAttribute="top" secondItem="RuX-My-jbC" secondAttribute="bottom" constant="8" id="gZq-E2-bhY"/>
+                            <constraint firstItem="edS-Uk-oW6" firstAttribute="leading" secondItem="SPc-z4-Hjp" secondAttribute="leadingMargin" id="hyf-kU-S2d"/>
+                            <constraint firstItem="iPf-Rn-p1w" firstAttribute="top" secondItem="ei8-6X-v5O" secondAttribute="bottom" constant="5" id="i3g-9f-U7V"/>
+                            <constraint firstItem="edS-Uk-oW6" firstAttribute="top" secondItem="ei8-6X-v5O" secondAttribute="bottom" constant="1" id="rtf-mx-OtL"/>
+                            <constraint firstItem="vQX-4b-QH4" firstAttribute="top" secondItem="edS-Uk-oW6" secondAttribute="bottom" constant="7" id="svq-wC-lVZ"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="goHomeOutlet" destination="Jt2-3k-Gbr" id="Pfd-ZQ-7oy"/>
-                        <outlet property="imageOne" destination="po9-Pt-lVU" id="P2h-7o-aa8"/>
-                        <outlet property="imageOneButtonOutlet" destination="BbD-GU-n65" id="z6d-0C-FG5"/>
-                        <outlet property="imageTwo" destination="9oH-5T-L5n" id="wHL-vG-jeJ"/>
-                        <outlet property="imageTwoButtonOutlet" destination="Z0T-Ja-pAQ" id="deU-Eq-DmR"/>
                         <outlet property="mainView" destination="ei8-6X-v5O" id="8r3-ng-gcA"/>
-                        <outlet property="saveButtonOutlet" destination="bCt-LH-XH8" id="9KD-Ow-Oh8"/>
-                        <segue destination="fR5-gW-CdC" kind="unwind" identifier="unwindToMainView" unwindAction="prepareForUnwindWithSegue:" id="tqG-Jk-Po8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lDc-fC-KgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="fR5-gW-CdC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1732" y="24.7376311844078"/>
+            <point key="canvasLocation" x="1714.4000000000001" y="24.7376311844078"/>
         </scene>
-        <!--Two Create View Controller-->
+        <!--Save Collage-->
         <scene sceneID="b45-3c-Vq9">
             <objects>
-                <viewController id="Kii-eM-VdZ" customClass="TwoCreateViewController" customModule="CollageUtility" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Kii-eM-VdZ" customClass="SaveCollage" customModule="CollageUtility" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iti-cf-hEv"/>
                         <viewControllerLayoutGuide type="bottom" id="P6A-cK-Dr2"/>
@@ -80,64 +99,8 @@
                     <view key="view" contentMode="scaleToFill" id="DCN-6p-7ul">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Mv-oi-BDq">
-                                <rect key="frame" x="0.0" y="20" width="0.0" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gq6-Oe-Mac">
-                                        <rect key="frame" x="0.0" y="193" width="188" height="184"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svy-VM-oRH">
-                                        <rect key="frame" x="187" y="193" width="188" height="184"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.053160910149999997" blue="0.014721448329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbD-GU-n65">
-                                <rect key="frame" x="31" y="59" width="43.5" height="22.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
-                                <state key="normal" title="+"/>
-                                <connections>
-                                    <action selector="addFirstImage:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="aLo-iC-058"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCt-LH-XH8">
-                                <rect key="frame" x="68" y="39" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Share"/>
-                                <connections>
-                                    <action selector="saveCollage:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="Sfl-Zi-N7L"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="po9-Pt-lVU">
-                                <rect key="frame" x="48" y="89" width="115" height="80.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9oH-5T-L5n">
-                                <rect key="frame" x="193" y="85" width="117.5" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0T-Ja-pAQ">
-                                <rect key="frame" x="213" y="28" width="46.5" height="23.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
-                                <state key="normal" title="+"/>
-                                <connections>
-                                    <action selector="addSecondImage:" destination="Etk-Xn-Jzv" eventType="touchUpInside" id="J0s-5W-YCP"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="imageOneSave" destination="Gq6-Oe-Mac" id="sfT-Qv-r3e"/>
-                        <outlet property="imageTwoSave" destination="svy-VM-oRH" id="Woi-rd-Uzm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdI-xw-VbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
