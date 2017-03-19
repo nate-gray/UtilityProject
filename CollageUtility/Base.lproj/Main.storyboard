@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-6X-v5O">
-                                <rect key="frame" x="0.0" y="28" width="375" height="592"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-6X-v5O">
+                                <rect key="frame" x="10" y="28" width="355" height="589"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zj8-aZ-Uqr">
@@ -54,6 +54,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iPf-Rn-p1w" firstAttribute="trailing" secondItem="SPc-z4-Hjp" secondAttribute="trailingMargin" id="7Nt-yf-g0y"/>
+                            <constraint firstAttribute="trailing" secondItem="ei8-6X-v5O" secondAttribute="trailing" constant="10" id="CSF-Bu-MF8"/>
+                            <constraint firstItem="ei8-6X-v5O" firstAttribute="trailing" secondItem="SPc-z4-Hjp" secondAttribute="trailingMargin" constant="5" id="Jsl-wO-gw8"/>
                             <constraint firstItem="vQX-4b-QH4" firstAttribute="top" secondItem="iPf-Rn-p1w" secondAttribute="bottom" constant="12" id="KcC-rU-j2C"/>
                             <constraint firstItem="edS-Uk-oW6" firstAttribute="top" secondItem="ei8-6X-v5O" secondAttribute="bottom" constant="1" id="M05-cc-ebw"/>
                             <constraint firstAttribute="trailing" secondItem="ei8-6X-v5O" secondAttribute="trailing" id="P5m-ue-JdP"/>
@@ -61,8 +63,11 @@
                             <constraint firstItem="ei8-6X-v5O" firstAttribute="top" secondItem="RuX-My-jbC" secondAttribute="bottom" constant="8" id="gZq-E2-bhY"/>
                             <constraint firstItem="edS-Uk-oW6" firstAttribute="leading" secondItem="SPc-z4-Hjp" secondAttribute="leadingMargin" id="hyf-kU-S2d"/>
                             <constraint firstItem="iPf-Rn-p1w" firstAttribute="top" secondItem="ei8-6X-v5O" secondAttribute="bottom" constant="5" id="i3g-9f-U7V"/>
+                            <constraint firstItem="ei8-6X-v5O" firstAttribute="leading" secondItem="SPc-z4-Hjp" secondAttribute="leadingMargin" constant="5" id="kKN-fp-a09"/>
                             <constraint firstItem="edS-Uk-oW6" firstAttribute="top" secondItem="ei8-6X-v5O" secondAttribute="bottom" constant="1" id="rtf-mx-OtL"/>
                             <constraint firstItem="vQX-4b-QH4" firstAttribute="top" secondItem="edS-Uk-oW6" secondAttribute="bottom" constant="7" id="svq-wC-lVZ"/>
+                            <constraint firstAttribute="trailing" secondItem="ei8-6X-v5O" secondAttribute="trailing" constant="10" id="voz-MV-AwW"/>
+                            <constraint firstItem="ei8-6X-v5O" firstAttribute="leading" secondItem="SPc-z4-Hjp" secondAttribute="leading" constant="10" id="xDV-GF-EV1"/>
                         </constraints>
                     </view>
                     <connections>

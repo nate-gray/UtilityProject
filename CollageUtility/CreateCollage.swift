@@ -164,7 +164,7 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
         
         let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage //selected image from picker
         
-        let imageview = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))  //create a new UIImageView frame for selected picker
+        let imageview = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))  //create a new UIImageView frame for selected picker
         imageview.image = pickedImage  //place the selected image in the new view
         imageview.contentMode = .scaleAspectFit //scale the image
         self.mainView.addSubview(imageview) //add the new view to the main view
