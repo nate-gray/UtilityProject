@@ -23,9 +23,9 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
     
     //MARK: Property values
     
-    @IBOutlet weak var fontStyle: UIFont!
-    @IBOutlet weak var fontColor: UIColor!
-    @IBOutlet weak var canvasColor: UIColor!
+//    @IBOutlet weak var fontStyle: UIFont!
+//    @IBOutlet weak var fontColor: UIColor!
+//    @IBOutlet weak var canvasColor: UIColor!
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,6 +46,7 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
             
             mainView.backgroundColor = GlobalVariables.sharedManager.newCanvasColor
         }
+        
         
     }
     
@@ -133,26 +134,10 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
         let confirmText = UIAlertAction(title: "Done", style: .default) { (_) in
             if let field = alertController.textFields![0] as? UITextField {
                
-                // If no font has been set by the user, use default
-                
-                if (self.fontStyle == nil) {
-                    
-                    self.fontStyle = UIFont(name: "ArialMT", size: 40)
-                    
-                }
-                
-                // If no font color has been set, use default
-                
-                if (self.fontColor == nil) {
-                    
-                    self.fontColor = UIColor.black
-                    
-                }
-                
                 var label = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50)) // Create a label
                 label.text = field.text //Set the text of the label to text entered in alert
-                label.font = self.fontStyle
-                label.textColor = self.fontColor
+                label.font = GlobalVariables.sharedManager.fontStyle
+                label.textColor = GlobalVariables.sharedManager.fontColor
                 label.sizeToFit() // Resize the label to fit the string
                 label.isUserInteractionEnabled = true //Allow for gestures on the label
                 

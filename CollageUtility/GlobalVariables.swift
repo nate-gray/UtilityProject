@@ -14,6 +14,15 @@ class GlobalVariables {
     var canvasChanged = false
     var previousCanvasColor: UIColor!
     var newCanvasColor: UIColor!
+    var canvasColor: UIColor!
+    var fontStyle = UIFont(name: "ArialMT", size: 40)
+    var fontColor = UIColor.black
+    var resetCanvas = false
+    var redSlider: Float!
+    var greenSlider: Float!
+    var blueSlider: Float!
+    var alphaSlider: Float!
+
     
     //MARK: TEST
     class var sharedManager: GlobalVariables {
