@@ -51,5 +51,306 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollageUtility/Properties.swift"
+            timestampString = "511671360.48929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "chalkboardButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollageUtility/Properties.swift"
+            timestampString = "511670831.87744"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "Properties"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollageUtility.Properties.selectedFontStyle.getter : Swift.Optional&lt;__ObjC.UIFont&gt;"
+                  moduleName = "CollageUtility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n.gray/Documents/CSC470%20-%20iPhone%20Development/CollageUtility/CollageUtility/Properties.swift"
+                  timestampString = "511656297.212306"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollageUtility.Properties.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; CollageUtility.Properties"
+                  moduleName = "CollageUtility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n.gray/Documents/CSC470%20-%20iPhone%20Development/CollageUtility/CollageUtility/Properties.swift"
+                  timestampString = "511656297.215214"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollageUtility.Properties.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CollageUtility.Properties&gt;"
+                  moduleName = "CollageUtility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n.gray/Documents/CSC470%20-%20iPhone%20Development/CollageUtility/CollageUtility/Properties.swift"
+                  timestampString = "511656297.216443"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollageUtility/Properties.swift"
+            timestampString = "511671360.48929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollageUtility/Properties.swift"
+            timestampString = "511671360.48929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "Properties"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollageUtility.Properties.canvasChanged.setter : Swift.Bool"
+                  moduleName = "CollageUtility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n.gray/Documents/CSC470%20-%20iPhone%20Development/CollageUtility/CollageUtility/Properties.swift"
+                  timestampString = "511668994.5291"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollageUtility.Properties.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; CollageUtility.Properties"
+                  moduleName = "CollageUtility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n.gray/Documents/CSC470%20-%20iPhone%20Development/CollageUtility/CollageUtility/Properties.swift"
+                  timestampString = "511668994.530661"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "298">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollageUtility.Properties.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CollageUtility.Properties&gt;"
+                  moduleName = "CollageUtility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n.gray/Documents/CSC470%20-%20iPhone%20Development/CollageUtility/CollageUtility/Properties.swift"
+                  timestampString = "511668994.532489"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "224">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollageUtility/Properties.swift"
+            timestampString = "511671360.48929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "sliderChanged(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollageUtility/Properties.swift"
+            timestampString = "511670831.87744"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "Properties"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollageUtility.Properties.selectedCanvasColor.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIColor&gt;"
+                  moduleName = "CollageUtility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n.gray/Documents/CSC470%20-%20iPhone%20Development/CollageUtility/CollageUtility/Properties.swift"
+                  timestampString = "511666956.751738"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollageUtility.Properties.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; CollageUtility.Properties"
+                  moduleName = "CollageUtility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n.gray/Documents/CSC470%20-%20iPhone%20Development/CollageUtility/CollageUtility/Properties.swift"
+                  timestampString = "511666956.755481"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "233">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollageUtility.Properties.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CollageUtility.Properties&gt;"
+                  moduleName = "CollageUtility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n.gray/Documents/CSC470%20-%20iPhone%20Development/CollageUtility/CollageUtility/Properties.swift"
+                  timestampString = "511666956.7575"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "159">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollageUtility/CreateCollage.swift"
+            timestampString = "511671360.48929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "longPressAction(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollageUtility/GlobalVariables.swift"
+            timestampString = "511670978.745297"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "GlobalVariables"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollageUtility.GlobalVariables.previousCanvasColor.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIColor&gt;"
+                  moduleName = "CollageUtility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n.gray/Documents/CSC470%20-%20iPhone%20Development/CollageUtility/CollageUtility/GlobalVariables.swift"
+                  timestampString = "511671165.533256"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "54">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollageUtility.GlobalVariables.init () -&gt; CollageUtility.GlobalVariables"
+                  moduleName = "CollageUtility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/n.gray/Documents/CSC470%20-%20iPhone%20Development/CollageUtility/CollageUtility/GlobalVariables.swift"
+                  timestampString = "511671165.534823"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

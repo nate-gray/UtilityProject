@@ -11,6 +11,7 @@ import UIKit
 class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,10 +20,33 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
         imagePicker.delegate = self
         
     }
+    
+    //MARK: Property values
+    
+    @IBOutlet weak var fontStyle: UIFont!
+    @IBOutlet weak var fontColor: UIColor!
+    @IBOutlet weak var canvasColor: UIColor!
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    //MARK: Unwind from properties
+    
+    @IBAction func unwindToMain(segue: UIStoryboardSegue) {
+        
+        if (GlobalVariables.sharedManager.canvasChanged == false) {
+            
+            mainView.backgroundColor = GlobalVariables.sharedManager.previousCanvasColor
+            
+        }
+        
+        else {
+            
+            mainView.backgroundColor = GlobalVariables.sharedManager.newCanvasColor
+        }
+        
     }
     
     //MARK: Outlets
@@ -31,11 +55,12 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
     @IBOutlet weak var saveButtonOutlet: UIButton!
     @IBOutlet weak var createAnotherOutlet: UIButton!
     
+    
     //MARK: Create Image Picker Controller
     
     let imagePicker = UIImagePickerController()
-    
-    //MARK: Gesture Handlers
+
+    //MARK: Handlers
     
     func handleTap(_ recognizer:UITapGestureRecognizer) {
         
@@ -86,6 +111,13 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
         
     }
     
+    @IBAction func longPressAction(sender: AnyObject) {
+
+        GlobalVariables.sharedManager.previousCanvasColor = mainView.backgroundColor
+        performSegue(withIdentifier: "goToProperties", sender: AnyObject.self)
+    
+    }
+
     @IBAction func addText(_ sender: UIButton) {
         
         // Create an alert to prompt for message
@@ -100,10 +132,27 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
         // If text is entered, when selecting dont create a label
         let confirmText = UIAlertAction(title: "Done", style: .default) { (_) in
             if let field = alertController.textFields![0] as? UITextField {
+               
+                // If no font has been set by the user, use default
+                
+                if (self.fontStyle == nil) {
+                    
+                    self.fontStyle = UIFont(name: "ArialMT", size: 40)
+                    
+                }
+                
+                // If no font color has been set, use default
+                
+                if (self.fontColor == nil) {
+                    
+                    self.fontColor = UIColor.black
+                    
+                }
                 
                 var label = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50)) // Create a label
                 label.text = field.text //Set the text of the label to text entered in alert
-                label.font = UIFont(name: "MarkerFelt-Thin", size: 40) // Custom font style
+                label.font = self.fontStyle
+                label.textColor = self.fontColor
                 label.sizeToFit() // Resize the label to fit the string
                 label.isUserInteractionEnabled = true //Allow for gestures on the label
                 
@@ -160,26 +209,6 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
         present(appleShare, animated: true, completion: nil)
         
     }
-
-    
-//    @IBAction func createAnother(_ sender: UIButton) {
-//        
-//        self.performSegue(withIdentifier: "unwindToMainView", sender: self)
-//        
-//    }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        if segue.identifier == "Save Image" {
-//            
-//            let segueToPreview = segue.destination as! SaveCollage
-    
-//            dvc.image1 = imageOne.image
-//            dvc.image2 = imageTwo.image
-
-//        }
-//        
-//    }
     
 
     //MARK: Launch image picker, add image to the canvas, and implement gestures to the image
