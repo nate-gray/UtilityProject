@@ -47,6 +47,16 @@ class CreateCollage: UIViewController, UIImagePickerControllerDelegate, UINaviga
             mainView.backgroundColor = GlobalVariables.sharedManager.newCanvasColor
         }
         
+        if(GlobalVariables.sharedManager.resetCanvas == true) {
+            
+            for view in mainView.subviews {
+                
+                view.removeFromSuperview()
+                
+            }
+            
+        }
+        
         
     }
     
