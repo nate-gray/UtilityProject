@@ -165,7 +165,7 @@ class Properties: UIViewController {
     
     @IBAction func zapfinoButton(_ sender: UIButton) {
         
-        GlobalVariables.sharedManager.fontStyle = UIFont(name: "Zapfino", size: 40)
+        GlobalVariables.sharedManager.fontStyle = UIFont(name: "Zapfino", size: 30)
         fontPreview.font = GlobalVariables.sharedManager.fontStyle
         
     }
